@@ -16,6 +16,11 @@ h6,
 p {
   margin: 0;
 }
+
+input {
+  font-family: inherit;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -426,4 +431,185 @@ button {
 }
 .social-list-icon {
   fill: #f4f4fd;
+}
+
+.modal-window-overlay {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-window-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-window {
+  position: relative;
+  width: 408px;
+  height: 80%;
+  max-height: 584px;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fcfcfc;
+  overflow: hidden;
+  padding: 72px 24px 24px 24px;
+}
+.modal-close-button {
+  border-radius: 100%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  stroke-width: 1px;
+  stroke: rgba(0, 0, 0, 0.1);
+  border: none;
+  background-color: #e7e9fc;
+  position: absolute;
+  top: 29px;
+  right: 29px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-button:hover {
+  background-color: #4d5ae5;
+}
+.modal-close-button:hover .modal-close-icon {
+  fill: #fff;
+}
+.modal-close-icon {
+  fill: #2e2f42;
+  width: 8px;
+  height: 8px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+  margin-bottom: 11px;
+}
+.modal-label {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-bottom: 4px;
+}
+
+.modal-input {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  padding-left: 38px;
+  margin-bottom: 8px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input:focus {
+  border-color: #4d5ae5;
+}
+.modal-input:focus + .input-icon {
+  fill: #4d5ae5;
+}
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input-comment {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px;
+  resize: none;
+  margin-bottom: 21px;
+}
+.modal-input-comment::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+}
+.checkbox-link {
+  line-height: 1.33333;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
+}
+.modal-button {
+  display: block;
+  border-radius: 4px;
+  padding: 16px 32px;
+  width: 169px;
+  height: 56px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background-color: #4d5ae5;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-button:hover {
+  background-color: #404bbf;
+}
+.modal-custom-checkbox {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  fill: transparent;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  margin-right: 8px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input-checkbox:checked + .modal-label-chekbox > .modal-custom-checkbox {
+  fill: #f4f4fd;
+  background-color: #404bbf;
+}
+.modal-input-checkbox:focus + .modal-label-chekbox > .modal-custom-checkbox {
+  outline: 2px solid rgba(0, 0, 225, 0.5);
+}
+.modal-label-chekbox {
+  display: inline-flex;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-bottom: 24px;
 }
