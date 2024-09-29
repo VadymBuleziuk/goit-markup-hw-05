@@ -612,8 +612,8 @@ button {
   background-color: #404bbf;
 }
 .modal-custom-checkbox {
-  cursor: pointer;
   display: inline-flex;
+  cursor: pointer;
   align-items: center;
   justify-content: center;
   width: 16px;
@@ -625,6 +625,7 @@ button {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .modal-input-checkbox:checked + .modal-label-chekbox > .modal-custom-checkbox {
   border: none;
   fill: #f4f4fd;
