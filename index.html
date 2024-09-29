@@ -424,7 +424,7 @@
                 placeholder="E-mail"
               />
             </label>
-            <button class="subscribe-button">
+            <button class="subscribe-button" type="submit">
               Subscribe
               <svg class="subscribe-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-subscribe-icon"></use>
@@ -434,7 +434,7 @@
         </div>
       </div>
     </footer>
-    <div class="modal-window-overlay">
+    <div class="modal-window-overlay is-open">
       <div class="modal-window">
         <button class="modal-close-button" type="button">
           <svg class="modal-close-icon" width="8" height="8">
@@ -451,6 +451,8 @@
                 <use href="./images/icons.svg#icon-person-icon"></use>
               </svg>
             </div>
+          </div>
+          <div class="modal-wrapper">
             <label class="modal-label" for="user-tel">Phone</label>
             <div class="input-wrapper">
               <input class="modal-input" type="tel" id="user-tel" name="user-tel" />
@@ -458,6 +460,8 @@
                 <use href="./images/icons.svg#icon-phone-icon"></use>
               </svg>
             </div>
+          </div>
+          <div class="modal-wrapper">
             <label class="modal-label" for="user-email">Email</label>
             <div class="input-wrapper">
               <input class="modal-input" type="email" id="user-email" name="user-email" />
@@ -465,6 +469,8 @@
                 <use href="./images/icons.svg#icon-email-icon"></use>
               </svg>
             </div>
+          </div>
+          <div class="modal-wrapper">
             <label class="modal-label" for="user-text">Comment</label>
             <textarea
               class="modal-input modal-input-comment"
@@ -478,6 +484,8 @@
               name="user-policy"
               id="user-policy"
             />
+          </div>
+          <div class="modal-wrapper">
             <label class="modal-label-chekbox" for="user-policy">
               <span class="modal-custom-checkbox"
                 ><svg class="ckeckbox-custom-icon" width="10" height="8">
@@ -485,8 +493,8 @@
               >I accept the terms and conditions of the
               <a class="checkbox-link" href="">Privacy Policy</a>
             </label>
-            <button class="modal-button" type="submit">Send</button>
           </div>
+          <button class="modal-button" type="submit">Send</button>
         </form>
       </div>
     </div>
