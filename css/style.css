@@ -588,7 +588,6 @@ button {
 }
 .modal-wrapper-checkbox {
   margin-bottom: 24px;
-  display: inline-flex;
 }
 .modal-button {
   display: block;
@@ -636,7 +635,6 @@ button {
   outline: 2px solid rgba(0, 0, 225, 0.5);
 }
 .modal-label-chekbox {
-  display: inline-flex;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
